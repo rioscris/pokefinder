@@ -8,6 +8,9 @@ It's a web-app developed on ReactJS and consuming specific libraries such as:
 - Redux
 - TypeScript
 
+### Prerequisites
+
+This web-app requires the `npm` package management system to be installed in order to run. Instructions on how to install it can be found here https://nodejs.org/es/download/!
 In order to run this web-app, clone this public repository on your localhost running the following line on the command line interface:
 
 ```bash
