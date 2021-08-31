@@ -1,0 +1,10 @@
+.layoutContainer {
+  width: 100%;
+  background-color: #f0f0f0;
+  height: 100%;
+}
+
+.navBar {
+  background-color: #c6ccec;
+  height: 6%;
+}
