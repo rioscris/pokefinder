@@ -1,4 +1,4 @@
-import { Heading } from "@chakra-ui/react";
+import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 import useLoadPokemon from "./hooks/useLoadPokemon";
 import IPokemon from "./interfaces";
@@ -14,9 +14,9 @@ const NoResults = ({ name }: { name: string }) => {
 
 const Pokemon = ({ information }: { information: IPokemon }) => {
   return (
-    <>
-      <Heading>{information.name}</Heading>
-    </>
+    <Box>
+      <Heading>Nombre: {information.name}</Heading>
+    </Box>
   );
 };
 
