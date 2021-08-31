@@ -5,6 +5,7 @@ import Layout from "./components/layout/Layout";
 import ResultsList from "./components/resultsList/ResultsList";
 import { Provider } from "react-redux";
 import store from "./configureStore";
+import Contact from "./components/contact/Contact";
 
 const Providers = ({ children }) => {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Layout>
         <Finder />
         <ResultsList />
+        <Contact />
       </Layout>
     </Providers>
   );
