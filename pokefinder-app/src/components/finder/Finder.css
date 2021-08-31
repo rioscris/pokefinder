@@ -1,11 +1,11 @@
 .container {
   height: 20%;
-  background-color: #F7657D;
-  display: flex;
-  align-items: center;
+  background-color: #f7657d;
   padding-left: 1%;
   padding-right: 1%;
   color: white;
+  display: flex;
+  align-items: center;
 }
 
 .dot {
@@ -21,4 +21,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.input {
+  background: white!important;
+  color: black;
+}
+
+.button {
+  width: 20%!important;
+  color: black;
 }
