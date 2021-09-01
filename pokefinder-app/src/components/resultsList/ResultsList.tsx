@@ -1,7 +1,7 @@
 import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
 import useLoadPokemon from "./hooks/useLoadPokemon";
-import IPokemon from "./interfaces";
+import { IPokemon } from "./interfaces";
 import "./ResultsList.css";
 
 const NoResults = ({ name }: { name: string }) => {
@@ -13,18 +13,22 @@ const NoResults = ({ name }: { name: string }) => {
 };
 
 const Pokemon = ({ information }: { information: IPokemon }) => {
-  return (
-    <Box>
-      <Heading>Nombre: {information.name}</Heading>
-    </Box>
-  );
+  return <Heading>Nombre: {information.name}</Heading>;
 };
 
 const ResultsList = () => {
-  const {pokemon, loadedInformation} = useLoadPokemon();
+  const { pokemon, results } = useLoadPokemon();
   return (
     <div className="resultsContainer">
-      {!loadedInformation ? <NoResults name={pokemon} /> : <Pokemon information={loadedInformation} />}
+      {!results ? (
+        <NoResults name={pokemon} />
+      ) : (
+        results.map((pokemon, ix) => (
+          <Box>
+            <Pokemon information={pokemon} key={ix} />
+          </Box>
+        ))
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .resultsContainer {
     height: 58%;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
     padding-left: 1%;
     padding-right: 1%;
 }
