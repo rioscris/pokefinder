@@ -47,7 +47,7 @@ const getPokemonsInformation = (list: Array<IPokemonData>) => {
 
 const useLoadPokemon = () => {
   const pokemon = useSelector((state: PokemonState) => state.pokemon);
-  const [resultList, setResultList] = useState<Array<IPokemon>>([]);
+  const [resultList, setResultList] = useState<Array<IPokemon>|null>(null);
 
   useEffect(() => {
     if (pokemon) {
