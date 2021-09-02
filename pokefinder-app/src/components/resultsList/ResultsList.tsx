@@ -1,30 +1,20 @@
-import { Box, Heading } from "@chakra-ui/react";
 import React from "react";
+import NoResults from "../resources/NoResults";
+import Pokemon from "../resources/Pokemon";
 import useLoadPokemon from "./hooks/useLoadPokemon";
-import IPokemon from "./interfaces";
 import "./ResultsList.css";
 
-const NoResults = ({ name }: { name: string }) => {
-  return (
-    <Heading>
-      Oops. No pudimos encontrar ningun pokemon llamado {name} :(
-    </Heading>
-  );
-};
-
-const Pokemon = ({ information }: { information: IPokemon }) => {
-  return (
-    <Box>
-      <Heading>Nombre: {information.name}</Heading>
-    </Box>
-  );
-};
-
 const ResultsList = () => {
-  const {pokemon, loadedInformation} = useLoadPokemon();
+  const { pokemon, results } = useLoadPokemon();
   return (
     <div className="resultsContainer">
-      {!loadedInformation ? <NoResults name={pokemon} /> : <Pokemon information={loadedInformation} />}
+      {results && results.length === 0 ? (
+        <NoResults name={pokemon} />
+      ) : (
+        results?.map((pokemon, ix) => (
+          <Pokemon information={pokemon} key={ix} />
+        ))
+      )}
     </div>
   );
 };
