@@ -35,6 +35,5 @@ That should allow the project to run!
 
 #### Notes: 
 #### - This project is an activity for FlyDevs recruitment process.
-#### - As of now, the project is not fully finished, as the pokemon display is still quite incomplete and needs to be finished. This will be a new version in master!
 
 For any doubts, my email is mrioscristian@gmail.com and I'm available anytime for any comment! :)
